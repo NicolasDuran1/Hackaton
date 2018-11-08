@@ -38,7 +38,7 @@ Class Clients
             'base_uri' => 'apifintech-team2.3it.cl/hackathon',
         ]);
 
-        $response = $client->request('GET', "clients/{$id}"); 
+        $response = $client->request('GET', "hackathon/clients/{$id}"); 
 
         return json_decode($response->getBody()->getContents()); 
 	}
