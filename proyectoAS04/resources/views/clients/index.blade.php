@@ -17,16 +17,45 @@
 			          	<table class="table mb-0">
 			              	<thead class="bg-light" >
 			                	<tr role="row">
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Rut Cliente</th>
 				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Nombre Cliente</th>
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Edad</th>
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">formattedRut</th>
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Género</th>
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Región </th>
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Sub Type</th>
+				                  	<th tabindex="0" class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Tipo</th>
 				                  	<th tabindex="0" aria-controls="example2" rowspan="1" colspan="1">Acciones</th>
 			                	</tr>
 			             	</thead>
 			             	<tbody>
 			              	@foreach ($clients as $client)
 			                  	<tr role="row" class="odd">
+			                  		<td>
+			                        	{{ $client->rut }}-{{ $client->dv }}
+			                        </td>
 			                        <td>
 			                        	{{ $client->fullName }}
 			                        </td>
+			                        <td>
+			                        	{{ $client->age }}
+			                        </td>
+			                        <td>
+			                        	{{ $client->formattedRut }}
+			                        </td>
+			                        <td>
+			                        	{{ $client->gender }}
+			                        </td>
+			                        <td>
+			                        	{{ $client->region }}
+			                        </td>
+			                        <td>
+			                        	{{ $client->subType }}
+			                        </td>
+			                        <td>
+			                        	{{ $client->type }}
+			                        </td>
+			                      
 			                        <td>
 			                          	<a class="col-sm-6" target="_blank" href="/clients/{{$client->rut}}">
 			                              <i class="far fa-eye">
@@ -45,7 +74,3 @@
 	</div>
 
 @endsection
-
-
-
-		
